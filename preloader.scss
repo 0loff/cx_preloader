@@ -1,0 +1,98 @@
+.preloader {
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 14px;
+        background-color: #156789;
+        z-index: 1;
+    }
+    &__content-wrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.squares {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+} 
+
+.square {
+    width: 23px;
+    height: 23px;
+    border: solid 4px #fff;
+    position: relative;
+
+    &__item {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        background: transparent;
+        top: 2px;
+        &:first-child {
+            left: -33px;
+            transform-origin: 0% 50%;
+            animation-name: left-in-center;
+            animation-duration: 2s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+        }          
+        &:last-child {
+            left: 38px;                      
+            transform-origin: 50% 100%;
+            animation-name: right-in-center;
+            animation-duration: 2s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+    }
+    @keyframes left-in-center {
+        50% { 
+            background: #fff;
+            transform: translateX(0);
+        }
+        75% { 
+            background: #fff;
+            transform: translateX(35px);
+        }
+        85% {
+            background: #fff;
+            transform: translateX(35px);
+        }
+        100% {
+            background: transparent;
+            transform: translateX(35px);
+        }
+    }              
+    @keyframes right-in-center {
+        50% {
+            background: #fff;
+            transform: translateX(0);
+        }
+        75% { 
+            background: #fff;
+            transform: translateX(-36px);
+        }
+        85% {
+            background: #fff;
+            transform: translateX(-36px);
+        }
+        100% {
+            background: transparent;
+            transform: translateX(-36px);
+        }
+    }
+}
