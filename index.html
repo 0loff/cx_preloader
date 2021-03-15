@@ -50,7 +50,7 @@
         .square__item:first-child {
             left: -33px;
             transform-origin: 0% 50%;
-            animation-name: left-in-center;
+            animation-name: left-center;
             animation-duration: 2s;
             animation-fill-mode: backwards;
             animation-iteration-count: infinite;
@@ -59,13 +59,13 @@
         .square__item:last-child {
             left: 38px;                      
             transform-origin: 50% 100%;
-            animation-name: right-in-center;
+            animation-name: right-center;
             animation-duration: 2s;
             animation-fill-mode: backwards;
             animation-iteration-count: infinite;
             animation-delay: 1s;
         }
-        @keyframes left-in-center {
+        @keyframes left-center {
         50% { 
             background: #fff;
             transform: translateX(0);
@@ -83,7 +83,7 @@
             transform: translateX(35px);
         }
         }              
-        @keyframes right-in-center {
+        @keyframes right-center {
             50% {
                 background: #fff;
                 transform: translateX(0);
@@ -114,7 +114,6 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__logo icon icon_mainLogo"></div>
         </div>
     </div>
 </body>
