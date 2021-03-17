@@ -27,28 +27,30 @@
             flex-direction: column;
             justify-content: center;
         }
-        .squares {
+        .circles {
             width: 100%;
             display: flex;
             justify-content: space-around;
             margin-bottom: 40px;
         }
-        .square {
+        .circle {
             box-sizing: border-box;
-            width: 23px;
-            height: 23px;
+            width: 28px;
+            height: 28px;
             border: solid 4px #fff;
             position: relative;
+            border-radius: 50%;
         }
-        .square__item {
+        .circle__item {
             position: absolute;
-            width: 11px;
-            height: 11px;
+            width: 16px;
+            height: 16px;
             background: transparent;
             top: 2px;
+            border-radius: 50%;
         }
-        .square__item:first-child {
-            left: -33px;
+        .circle__item:first-child {
+            left: -38px;
             transform-origin: 0% 50%;
             animation-name: left-center;
             animation-duration: 2s;
@@ -56,8 +58,8 @@
             animation-iteration-count: infinite;
             animation-delay: 0s;
         }
-        .square__item:last-child {
-            left: 38px;                      
+        .circle__item:last-child {
+            left: 43px;                      
             transform-origin: 50% 100%;
             animation-name: right-center;
             animation-duration: 2s;
@@ -72,15 +74,15 @@
         }
         75% { 
             background: #fff;
-            transform: translateX(35px);
+            transform: translateX(40px);
         }
         85% {
             background: #fff;
-            transform: translateX(35px);
+            transform: translateX(40px);
         }
         100% {
             background: transparent;
-            transform: translateX(35px);
+            transform: translateX(40px);
         }
         }              
         @keyframes right-center {
@@ -90,15 +92,15 @@
             }
             75% { 
                 background: #fff;
-                transform: translateX(-36px);
+                transform: translateX(-41px);
             }
             85% {
                 background: #fff;
-                transform: translateX(-36px);
+                transform: translateX(-41px);
             }
             100% {
                 background: transparent;
-                transform: translateX(-36px);
+                transform: translateX(-41px);
             }
         }
     </style>
@@ -107,14 +109,14 @@
     <div id="preloader_wrapper" class="preloader__wrapper" >
         <div class="preloader">
             <div class="preloader__content-wrapper">
-                <div class="squares">
-                    <div class="square">
-                        <div class="square__item"></div>
-                        <div class="square__item"></div>
+                <div class="circles">
+                    <div class="circle">
+                      <div class="circle__item"></div>
+                      <div class="circle__item"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 </body>
 </html>
